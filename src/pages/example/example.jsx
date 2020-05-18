@@ -3,7 +3,7 @@ import { View, Text } from '@tarojs/components'
 
 import EasyCom from '../../components/EasyCom/EasyCom'
 
-import './index.less'
+import './example.less'
 
 export default class Index extends Component {
   config = {
@@ -11,43 +11,43 @@ export default class Index extends Component {
   }
 
   componentWillMount() {
-    console.log('index -- componentWillMount');
+    console.log('example -- componentWillMount');
   }
 
   componentDidMount() {
-    console.log('index -- componentDidMount');
+    console.log('example -- componentDidMount');
   }
 
   shouldComponentUpdate(nextProps, nextState) {
-    console.log('index -- shouldComponentUpdate');
+    console.log('example -- shouldComponentUpdate');
   }
 
   componentWillUpdate(nextProps, nextState) {
-    console.log('index -- componentWillUpdate');
+    console.log('example -- componentWillUpdate');
   }
 
   componentDidUpdate(prevProps, prevState) {
-    console.log('index -- componentDidUpdate');
+    console.log('example -- componentDidUpdate');
   }
 
   componentWillUnmount() {
-    console.log('index -- componentWillUnmount');
+    console.log('example -- componentWillUnmount');
   }
 
   componentDidShow() {
-    console.log('index -- componentDidShow');
+    console.log('example -- componentDidShow');
   }
 
   componentDidHide() {
-    console.log('index -- componentDidHide');
+    console.log('example -- componentDidHide');
   }
 
   render () {
-    console.log('index -- render');
+    console.log('example -- render');
 
     return (
-      <View className='index'>
-        <Text>Hello world!</Text>
+      <View className='example'>
+        <Text>Hello world!---example</Text>
         <EasyCom></EasyCom>
       </View>
     )
