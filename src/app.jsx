@@ -1,5 +1,9 @@
 import Taro, { Component } from '@tarojs/taro'
+import { Provider } from '@tarojs/redux'
+
 import Index from './pages/index'
+
+import configStore from './store'
 
 import './app.less'
 
@@ -9,7 +13,10 @@ import './app.less'
 //   require('nerv-devtools')
 // }
 
+const store = configStore()
+
 class App extends Component {
+
   config = {
     pages: [
       'pages/index/index',
@@ -66,9 +73,11 @@ class App extends Component {
   // 请勿修改此函数
   render () {
     console.log('app.jsx -- render');
-
+    
     return (
-      <Index />
+      <Provider store={store}>
+        <Index />
+      </Provider>
     )
   }
 }

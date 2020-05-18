@@ -1,5 +1,5 @@
 const config = {
-  projectName: 'taro-learn',
+  projectName: 'myApp',
   date: '2020-5-18',
   designWidth: 750,
   deviceRatio: {
@@ -19,17 +19,35 @@ const config = {
     plugins: [
       'transform-decorators-legacy',
       'transform-class-properties',
-      'transform-object-rest-spread'
+      'transform-object-rest-spread',
+      ['transform-runtime', {
+          helpers: false,
+          polyfill: false,
+          regenerator: true,
+          moduleName: 'babel-runtime'
+        }
+      ]
     ]
   },
-  plugins: [],
   defineConstants: {
   },
   mini: {
     postcss: {
+      autoprefixer: {
+        enable: true,
+        config: {
+          browsers: [
+            'last 3 versions',
+            'Android >= 4.1',
+            'ios >= 8'
+          ]
+        }
+      },
       pxtransform: {
         enable: true,
-        config: {}
+        config: {
+
+        }
       },
       url: {
         enable: true,
