@@ -34,17 +34,18 @@ class App extends Component {
       "backgroundColor": "#fff",
       "list": [
         {
+          "pagePath": "pages/example/example",
+          "text": "example",
+          "iconPath": "assets/tabbar/matrix.png",
+          "selectedIconPath": "assets/tabbar/matrix-sel.png"
+        },
+        {
           "pagePath": "pages/index/index",
-          "text": "流程指导",
+          "text": "index",
           "iconPath": "assets/tabbar/query.png",
           "selectedIconPath": "assets/tabbar/query-sel.png"
         },
-        {
-          "pagePath": "pages/example/example",
-          "text": "更多",
-          "iconPath": "assets/tabbar/matrix.png",
-          "selectedIconPath": "assets/tabbar/matrix-sel.png"
-        }
+        
       ]
     }
   }

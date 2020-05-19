@@ -31,6 +31,11 @@ const config = {
   },
   defineConstants: {
   },
+  copy: {
+    patterns: [
+      { from: 'src/sitemap.json', to: 'dist' } // 指定需要 copy 的文件
+    ]
+  },
   mini: {
     postcss: {
       autoprefixer: {

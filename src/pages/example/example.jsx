@@ -49,6 +49,7 @@ export default class Index extends Component {
       <View className='example'>
         <Text>Hello world!---example</Text>
         <EasyCom></EasyCom>
+        <Navigator url="/pages/index/index" >to index</Navigator>
       </View>
     )
   }
