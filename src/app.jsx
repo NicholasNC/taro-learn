@@ -50,16 +50,34 @@ class App extends Component {
     }
   }
 
-  componentWillMount() {
+  async componentWillMount() {
     console.log('app.jsx -- componentWillMount');
+
+    const testJson = await Taro.request({
+      url: 'https://image.talkmoney.cn/test-v1.0.202005190120.json'
+    });
+
+    console.log('app.jsx -- componentWillMount -- testJson:', testJson); // 这里会 await Taro.request 执行完再执行
   }
 
-  componentDidMount () {
+  async componentDidMount () {
     console.log('app.jsx -- componentDidMount');
+
+    const testJson = await Taro.request({
+      url: 'https://image.talkmoney.cn/test-v1.0.202005190120.json'
+    });
+
+    console.log('app.jsx -- componentDidMount -- testJson:', testJson); // 这里会 await Taro.request 执行完再执行
   }
 
-  componentDidShow () {
+  async componentDidShow () {
     console.log('app.jsx -- componentDidShow');
+
+    const testJson = await Taro.request({
+      url: 'https://image.talkmoney.cn/test-v1.0.202005190120.json'
+    });
+
+    console.log('app.jsx -- componentDidShow -- testJson:', testJson); // 这里会 await Taro.request 执行完再执行
   }
 
   componentDidHide () {
